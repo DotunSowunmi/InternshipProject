@@ -13,7 +13,7 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement clickOnSignin => driver.FindElement(By.XPath("/html/body/section[1]/nav/div/div[1]/a[3]"));
         IWebElement enterValidEmailAddress => driver.FindElement(By.XPath("//*[@id='user_email']"));
         IWebElement enterValidPassword => driver.FindElement(By.Id("user_password"));
-        IWebElement clickOnSigninButton => driver.FindElement(By.XPath("//*[@id='btn_signin']"));
+        IWebElement clickOnSigninButton => driver.FindElement(By.CssSelector("#btn_signin"));
         IWebElement clickOnAccountDetailTab => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/ul/a[2]"));
         IWebElement clickOnEditDetail => driver.FindElement(By.CssSelector("#lnk_edit_personal"));
         IWebElement clickOnTitleDropDown => driver.FindElement(By.XPath("//*[@id='name_prefix']"));
@@ -28,7 +28,7 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement editAboutTextBox => driver.FindElement(By.Id("about"));
         IWebElement clickOnYesOrNo => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/div/div/div/div/form[1]/div[8]/div[2]/label[2]"));
         IWebElement clickOnSubmitButton => driver.FindElement(By.Id("btn_save_details"));
-        IWebElement successfulNotificationMessage => driver.FindElement(By.CssSelector("//*[@id='successMessage']"));
+        IWebElement successfulNotificationMessage => driver.FindElement(By.XPath("//*[@id='successNotification']/div"));
         public bool IssuccessfulNotificationMessageDispalyed()
         {
             return successfulNotificationMessage.Displayed;
@@ -63,7 +63,7 @@ namespace BlueOceanIntershipProject.PageObjects
         public void EditEmailAddress()
         {
             editEmailAddress.Clear();
-            editEmailAddress.SendKeys("tundegirl@hotmail.com");
+            editEmailAddress.SendKeys("yinkaland@gmail.com");
         }
         public void EditDateOfBirth()
         {
@@ -97,12 +97,13 @@ namespace BlueOceanIntershipProject.PageObjects
         }
         public void ClickOnAccountDetailTab()
         {
-            Thread.Sleep(5000);
+            
             clickOnAccountDetailTab.Click();
         }
         public void ClickonSigninButton()
         {
             clickOnSignin.Click();
+            
         }
 
         public void EnterValidPassword()
