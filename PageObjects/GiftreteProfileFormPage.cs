@@ -20,7 +20,7 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement selectTitleFromDropDownBox => driver.FindElement(By.XPath("//*[@id='name_prefix']/option[3]"));
         IWebElement editFirstName => driver.FindElement(By.XPath("//*[@id='first_name']"));
         IWebElement editLastName => driver.FindElement(By.XPath("//*[@id='last_name']"));
-        IWebElement editDateOfBirth => driver.FindElement(By.XPath("//*[@id='dateofbirth']"));
+        IWebElement editDateOfBirth => driver.FindElement(By.Id("dateofbirth"));
         IWebElement editEmailAddress => driver.FindElement(By.XPath("//*[@id='email']"));
         IWebElement clickOnPhoneCountryCode => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/div/div/div/div/form[1]/div[6]/div/div/div/div[2]"));
         IWebElement selectNewCountryCode => driver.FindElement(By.CssSelector("#iti-item-gb > span.country-name"));
@@ -29,6 +29,15 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement clickOnYesOrNo => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/div/div/div/div/form[1]/div[8]/div[2]/label[2]"));
         IWebElement clickOnSubmitButton => driver.FindElement(By.Id("btn_save_details"));
         IWebElement successfulNotificationMessage => driver.FindElement(By.XPath("//*[@id='successNotification']/div"));
+
+
+        //IWebElement fileInput => driver.FindElement(By.Name(""));
+
+        //public void FileInput()
+        //{
+        //    fileInput.SendKeys("C:/path/to/file.jpg");
+        //}
+        
         public bool IssuccessfulNotificationMessageDispalyed()
         {
             return successfulNotificationMessage.Displayed;

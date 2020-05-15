@@ -1,5 +1,6 @@
 ﻿using BlueOceanIntershipProject.Hooks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -22,7 +23,13 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement enterConfirmPassword => driver.FindElement(By.XPath("//*[@id='confirm_password']"));
         IWebElement clickOnCaptcha => driver.FindElement(By.XPath("//*[@id='recaptcha - anchor']/div[1]"));
         IWebElement clickOnRegisterButton => driver.FindElement(By.XPath("//*[@id='btn_register']"));
-       
+        IWebElement enterInvalidPassword => driver.FindElement(By.XPath("//*[@id='confirm_password']"));
+
+        public void EnterInvalidPaswword()
+        {
+            enterInvalidPassword.SendKeys("yinka1987");
+        }
+
         public void ClickOnRegisterButton()
         {
 
@@ -77,6 +84,8 @@ namespace BlueOceanIntershipProject.PageObjects
         {
             driver.Navigate().GoToUrl("http://www.qa.giftrete.com/");
         }
+
+
         public RegistrationPage()
         {
             driver = Hook.driver;

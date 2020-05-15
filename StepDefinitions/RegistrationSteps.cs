@@ -14,6 +14,20 @@ namespace BlueOceanIntershipProject.StepDefinitions
             registrationPage = new RegistrationPage();
         }
 
+
+        [When(@"I enter Invalid confirm password")]
+        public void WhenIEnterInvalidConfirmPassword()
+        {
+            registrationPage.EnterInvalidPaswword();
+        }
+
+        [Then(@"the mesage ""(.*)"" should be displayed")]
+        public void ThenTheMesageShouldBeDisplayed(string errorMessage)
+        {
+            
+        }
+
+
         [Given(@"I navigate to giftrete")]
         public void GivenINavigateToGiftrete()
         {
