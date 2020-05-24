@@ -1,4 +1,4 @@
-﻿using BlueOceanIntershipProject.Hooks;
+﻿ using BlueOceanIntershipProject.Hooks;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,11 @@ namespace BlueOceanIntershipProject.PageObjects
     class GiftreteProfileFormPage
     {
         IWebDriver driver;
+        public GiftreteProfileFormPage()
+        {
+            driver = Hook.driver;
+        }
+
         IWebElement clickOnSignin => driver.FindElement(By.XPath("/html/body/section[1]/nav/div/div[1]/a[3]"));
         IWebElement enterValidEmailAddress => driver.FindElement(By.XPath("//*[@id='user_email']"));
         IWebElement enterValidPassword => driver.FindElement(By.Id("user_password"));
@@ -19,16 +24,16 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement clickOnTitleDropDown => driver.FindElement(By.XPath("//*[@id='name_prefix']"));
         IWebElement selectTitleFromDropDownBox => driver.FindElement(By.XPath("//*[@id='name_prefix']/option[3]"));
         IWebElement editFirstName => driver.FindElement(By.XPath("//*[@id='first_name']"));
-        IWebElement editLastName => driver.FindElement(By.XPath("//*[@id='last_name']"));
-        IWebElement editDateOfBirth => driver.FindElement(By.Id("dateofbirth"));
+        IWebElement editLastName => driver.FindElement(By.XPath("//input[@id='last_name']"));
+        IWebElement editDateOfBirth => driver.FindElement(By.XPath("//input[@id='dateofbirth']"));
         IWebElement editEmailAddress => driver.FindElement(By.XPath("//*[@id='email']"));
         IWebElement clickOnPhoneCountryCode => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/div/div/div/div/form[1]/div[6]/div/div/div/div[2]"));
         IWebElement selectNewCountryCode => driver.FindElement(By.CssSelector("#iti-item-gb > span.country-name"));
         IWebElement editPhoneNumber => driver.FindElement(By.XPath("//*[@id='mobile']"));
-        IWebElement editAboutTextBox => driver.FindElement(By.Id("about"));
+        IWebElement editAboutTextBox => driver.FindElement(By.XPath("//textarea[@id='about']"));
         IWebElement clickOnYesOrNo => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/div/div/div/div/form[1]/div[8]/div[2]/label[2]"));
         IWebElement clickOnSubmitButton => driver.FindElement(By.Id("btn_save_details"));
-        IWebElement successfulNotificationMessage => driver.FindElement(By.XPath("//*[@id='successNotification']/div"));
+        IWebElement successfulNotificationMessage => driver.FindElement(By.XPath("//p[@id='successMessage']"));
 
 
         //IWebElement fileInput => driver.FindElement(By.Name(""));
@@ -37,10 +42,15 @@ namespace BlueOceanIntershipProject.PageObjects
         //{
         //    fileInput.SendKeys("C:/path/to/file.jpg");
         //}
-        
-        public bool IssuccessfulNotificationMessageDispalyed()
+
+        //public bool IssuccessfulNotificationMessageDispalyed()
+        //{
+        //    return successfulNotificationMessage.Displayed;
+        //}
+        public string GetTextForsuccessfulNotificationMessage()
         {
-            return successfulNotificationMessage.Displayed;
+            Thread.Sleep(500);
+            return successfulNotificationMessage.Text;
         }
         public void ClickOnSubmitButton()
         {
@@ -52,6 +62,7 @@ namespace BlueOceanIntershipProject.PageObjects
         }
         public void EditAboutTextBox()
         {
+            editAboutTextBox.Clear();
             editAboutTextBox.SendKeys("Jesus is Lord");
         }
 
@@ -82,12 +93,12 @@ namespace BlueOceanIntershipProject.PageObjects
         public void EditLastName()
         {
             editLastName.Clear();
-            editLastName.SendKeys("Damilare");
+            editLastName.SendKeys("Sowunmi");
         }
         public void EditFirstName()
         {
             editFirstName.Clear();
-            editFirstName.SendKeys("Oreifo");
+            editFirstName.SendKeys("Yinka");
         }
 
         public void SelectTitleFromDropDownBox()
@@ -121,7 +132,7 @@ namespace BlueOceanIntershipProject.PageObjects
         }
         public void EnterValidEmailAddress()
         {
-            enterValidEmailAddress.SendKeys("yinkaland@gmail.com");
+            enterValidEmailAddress.SendKeys("yinkaland000@gmail.com");
         }
         public void ClickOnSignin()
         {
@@ -132,11 +143,7 @@ namespace BlueOceanIntershipProject.PageObjects
             driver.Navigate().GoToUrl("http://www.qa.giftrete.com/");
         }
 
-        public GiftreteProfileFormPage()
-        {
-            driver = Hook.driver;
-        }
-
+        
 
     }
 }

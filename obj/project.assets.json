@@ -26,6 +26,18 @@
           "lib/netstandard2.0/Cucumber.Messages.dll": {}
         }
       },
+      "FluentAssertions/5.10.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/FluentAssertions.dll": {}
+        }
+      },
       "Gherkin/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -1952,6 +1964,42 @@
         "cucumber.messages.nuspec",
         "lib/net45/Cucumber.Messages.dll",
         "lib/netstandard2.0/Cucumber.Messages.dll"
+      ]
+    },
+    "FluentAssertions/5.10.3": {
+      "sha512": "gVPEVp1hLVqcv+7Q2wiDf7kqCNn7+bQcQ0jbJ2mcRT6CeRoZl1tNkqvzSIhvekyldDptk77j1b03MXTTRIqqpg==",
+      "type": "package",
+      "path": "fluentassertions/5.10.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentAssertions.png",
+        "fluentassertions.5.10.3.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net45/FluentAssertions.dll",
+        "lib/net45/FluentAssertions.pdb",
+        "lib/net45/FluentAssertions.xml",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/netcoreapp2.0/FluentAssertions.dll",
+        "lib/netcoreapp2.0/FluentAssertions.pdb",
+        "lib/netcoreapp2.0/FluentAssertions.xml",
+        "lib/netcoreapp2.1/FluentAssertions.dll",
+        "lib/netcoreapp2.1/FluentAssertions.pdb",
+        "lib/netcoreapp2.1/FluentAssertions.xml",
+        "lib/netstandard1.3/FluentAssertions.dll",
+        "lib/netstandard1.3/FluentAssertions.pdb",
+        "lib/netstandard1.3/FluentAssertions.xml",
+        "lib/netstandard1.6/FluentAssertions.dll",
+        "lib/netstandard1.6/FluentAssertions.pdb",
+        "lib/netstandard1.6/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml",
+        "lib/netstandard2.1/FluentAssertions.dll",
+        "lib/netstandard2.1/FluentAssertions.pdb",
+        "lib/netstandard2.1/FluentAssertions.xml"
       ]
     },
     "Gherkin/6.0.0": {
@@ -6595,6 +6643,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "FluentAssertions >= 5.10.3",
       "Microsoft.NET.Test.Sdk >= 16.6.1",
       "NUnit3TestAdapter >= 3.16.1",
       "Selenium.Chrome.WebDriver >= 81.0.0",
@@ -6608,19 +6657,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dotun Sowunmi\\.nuget\\packages\\": {}
+    "C:\\Users\\dotun\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dotun Sowunmi\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
+      "projectUniqueName": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
       "projectName": "BlueOceanIntershipProject",
-      "projectPath": "C:\\Users\\Dotun Sowunmi\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
-      "packagesPath": "C:\\Users\\Dotun Sowunmi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dotun Sowunmi\\source\\repos\\BlueOceanIntershipProject\\obj\\",
+      "projectPath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
+      "packagesPath": "C:\\Users\\dotun\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dotun Sowunmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dotun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6644,6 +6693,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "[5.10.3, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.6.1, )"

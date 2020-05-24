@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dotun Sowunmi\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj": {}
+    "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dotun Sowunmi\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj": {
+    "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dotun Sowunmi\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
+        "projectUniqueName": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
         "projectName": "BlueOceanIntershipProject",
-        "projectPath": "C:\\Users\\Dotun Sowunmi\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
-        "packagesPath": "C:\\Users\\Dotun Sowunmi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dotun Sowunmi\\source\\repos\\BlueOceanIntershipProject\\obj\\",
+        "projectPath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
+        "packagesPath": "C:\\Users\\dotun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dotun Sowunmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dotun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.6.1, )"

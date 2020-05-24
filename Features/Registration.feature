@@ -3,7 +3,7 @@
 	I should be able to register
 
 @mytag
-Scenario: Registration
+Scenario: Valid Registration
 	Given I navigate to giftrete
 	When I click on create account
 	And I enter the First Name
@@ -15,7 +15,7 @@ Scenario: Registration
 	And I enter password
 	And I enter confirm password	
 	And I click on register button
-	#Then I should be registered
+    Then "Thank you for signing up! You may now login" message should be displayed
 
 
 	Scenario: Invalid Registration
@@ -30,4 +30,11 @@ Scenario: Registration
 	     And I enter password
 	     And I enter Invalid confirm password
 	     And I click on register button
-	     #Then the mesage "the Confirm Password field does not match the Password field" should be displayed
+	     Then the mesage "The Confirm Password field does not match the Password field." should be displayed
+
+		 Scenario: Registration Privacy Policy
+	       Given I navigate to giftrete
+		   When I clicked on the privacy policy
+		   Then Privacy policy page should display
+
+		 

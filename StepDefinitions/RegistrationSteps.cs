@@ -1,5 +1,5 @@
 ﻿using BlueOceanIntershipProject.PageObjects;
-using System;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace BlueOceanIntershipProject.StepDefinitions
@@ -15,6 +15,18 @@ namespace BlueOceanIntershipProject.StepDefinitions
         }
 
 
+        [When(@"I clicked on the privacy policy")]
+        public void WhenIClickedOnThePrivacyPolicy()
+        {
+            registrationPage.PrivacyPolicy();
+        }
+
+        [Then(@"Privacy policy page should display")]
+        public void ThenPrivacyPolicyPageShouldDisplay()
+        {
+            Assert.True(registrationPage.IsPrivacyHomePageElementDisplayed());
+        }
+
         [When(@"I enter Invalid confirm password")]
         public void WhenIEnterInvalidConfirmPassword()
         {
@@ -24,7 +36,7 @@ namespace BlueOceanIntershipProject.StepDefinitions
         [Then(@"the mesage ""(.*)"" should be displayed")]
         public void ThenTheMesageShouldBeDisplayed(string errorMessage)
         {
-            
+             Assert.AreEqual(errorMessage, registrationPage.GetTextForConfirmedPasswordErrorMessage());
         }
 
 
@@ -92,24 +104,17 @@ namespace BlueOceanIntershipProject.StepDefinitions
         }
 
         
-
-        [When(@"I click on Captcha")]
-        public void WhenIClickOnCaptcha()
-        {
-            registrationPage.ClickOnCaptcha();
-        }
-
-
         [When(@"I click on register button")]
         public void WhenIClickOnRegisterButton()
         {
             registrationPage.ClickOnRegisterButton();
         }
-        
-        [Then(@"I should be registered")]
-        public void ThenIShouldBeRegistered()
+
+        [Then(@"""(.*)"" message should be displayed")]
+        public void ThenMessageShouldBeDisplayed(string registrationSuccessMessage)
         {
-           
+            Assert.AreEqual(registrationSuccessMessage, registrationPage.GetTextForRegistrationSuccessMessage());
         }
+
     }
 }

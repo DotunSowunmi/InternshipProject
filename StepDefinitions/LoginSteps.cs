@@ -66,6 +66,7 @@ namespace BlueOceanIntershipProject.StepDefinitions
         [Then(@"the message ""(.*)"" should be displayed")]
         public void ThenTheMessageShouldBeDisplayed(string errorMessage)
         {
+            Thread.Sleep(5000);
             Assert.AreEqual(errorMessage, loginPage.GetTextErrorMessageElement());
         }
 

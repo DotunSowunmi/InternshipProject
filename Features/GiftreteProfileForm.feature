@@ -23,4 +23,4 @@ Scenario: View Giftrete Profile Form
 	And I click to select Yes or No for community activity emails
 	And I click on submit button
 	#Then my personal information should be edited successfully
-	Then success notification box should be displayed
+	Then the message"User details saved successfully" should be displayed

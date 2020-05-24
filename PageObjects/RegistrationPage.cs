@@ -1,6 +1,8 @@
 ﻿using BlueOceanIntershipProject.Hooks;
+using BlueOceanIntershipProject.Utilities;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +14,12 @@ namespace BlueOceanIntershipProject.PageObjects
     class RegistrationPage
     {
         IWebDriver driver;
+        Waits wait = new Waits();
+        public RegistrationPage()
+        {
+            driver = Hook.driver;
+        }
+
         IWebElement clickOnCreateAccount => driver.FindElement(By.XPath("/html/body/section[1]/nav/div/div[1]/a[2]"));
         IWebElement enterFirstName => driver.FindElement(By.XPath("//*[@id='first_name']"));
         IWebElement enterLastName => driver.FindElement(By.XPath("//*[@id='last_name']"));
@@ -21,9 +29,35 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement enterPhoneNumber => driver.FindElement(By.XPath("//*[@id='mobile']"));
         IWebElement enterPassword => driver.FindElement(By.XPath("//*[@id='password']"));
         IWebElement enterConfirmPassword => driver.FindElement(By.XPath("//*[@id='confirm_password']"));
-        IWebElement clickOnCaptcha => driver.FindElement(By.XPath("//*[@id='recaptcha - anchor']/div[1]"));
         IWebElement clickOnRegisterButton => driver.FindElement(By.XPath("//*[@id='btn_register']"));
         IWebElement enterInvalidPassword => driver.FindElement(By.XPath("//*[@id='confirm_password']"));
+        IWebElement privacyPolicy => driver.FindElement(By.XPath("/html/body/footer/div/div/article[1]/li[2]/a"));
+        IWebElement privacyHomePageElement => driver.FindElement(By.XPath("/html/body/section[2]/div[1]/h1"));
+        IWebElement confirmedPasswordErrorMessage => driver.FindElement(By.XPath("//*[@id='dng_msg']/p"));
+        IWebElement RegistrationSuccessMessage => driver.FindElement(By.XPath("//*[@id='suc_msg']"));
+
+        public string GetTextForRegistrationSuccessMessage()
+        {
+            Thread.Sleep(500);
+            return RegistrationSuccessMessage.Text;
+        }
+
+
+        public string GetTextForConfirmedPasswordErrorMessage()
+        {
+            return confirmedPasswordErrorMessage.Text;
+        }
+
+
+        public bool IsPrivacyHomePageElementDisplayed()
+        {
+            Thread.Sleep(5000);
+            return privacyHomePageElement.Displayed;
+        }
+        public void PrivacyPolicy()
+        {
+            privacyPolicy.Click();
+        }
 
         public void EnterInvalidPaswword()
         {
@@ -35,11 +69,7 @@ namespace BlueOceanIntershipProject.PageObjects
 
             clickOnRegisterButton.Click();
         }
-        public void ClickOnCaptcha()
-        {
-            clickOnCaptcha.Click();
-            Thread.Sleep(5000);
-        }
+        
         public void EnterconfirmPassword()
         {
             enterConfirmPassword.SendKeys("P455w0rd");
@@ -64,7 +94,9 @@ namespace BlueOceanIntershipProject.PageObjects
         }
         public void EnterEmailAddress()
         {
-            enterEmailAddress.SendKeys("longman4real@hotmail.com");
+            Random randomGenerator = new Random();
+            int randomInt = randomGenerator.Next(1000);
+            enterEmailAddress.SendKeys("longman4real" + randomInt + "@hotmail.com");
         }
         public void EnterLastName()
         {
@@ -86,11 +118,7 @@ namespace BlueOceanIntershipProject.PageObjects
         }
 
 
-        public RegistrationPage()
-        {
-            driver = Hook.driver;
-        }
-        
+       
 
 
     }

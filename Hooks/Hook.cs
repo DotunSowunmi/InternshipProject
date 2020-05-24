@@ -24,7 +24,7 @@ namespace BlueOceanIntershipProject.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            driver.Quit();
+            driver.Close();
             driver.Dispose();
         }
     }

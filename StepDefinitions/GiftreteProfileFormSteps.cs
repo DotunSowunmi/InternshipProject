@@ -110,21 +110,31 @@ namespace BlueOceanIntershipProject.StepDefinitions
         [When(@"I click on submit button")]
         public void WhenIClickOnSubmitButton()
         {
-            giftreteProfileFormPage.ClickOnSubmitButton();
             Thread.Sleep(500);
+            giftreteProfileFormPage.ClickOnSubmitButton();
+            
         }
-        
+
         //[Then(@"my personal information should be edited successfully")]
         //public void ThenMyPersonalInformationShouldBeEditedSuccessfully()
         //{
-           
+            
         //}
-        
-        [Then(@"success notification box should be displayed")]
-        public void ThenSuccessNotificationBoxShouldBeDisplayed()
+
+        [Then(@"the message""(.*)"" should be displayed")]
+        public void ThenTheMessageShouldBeDisplayed(string successfulNotificationMessage)
         {
-            Thread.Sleep(500);
-            Assert.True(giftreteProfileFormPage.IssuccessfulNotificationMessageDispalyed());
+            Assert.AreEqual(successfulNotificationMessage, giftreteProfileFormPage.GetTextForsuccessfulNotificationMessage());
         }
+
+
+
+        //[Then(@"success notification box should be displayed")]
+        //public void ThenSuccessNotificationBoxShouldBeDisplayed()
+        //{
+        //    Assert.True(giftreteProfileFormPage.IssuccessfulNotificationMessageDispalyed());
+        //}
     }
+
+
 }

@@ -118,9 +118,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.And("I click on sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
- testRunner.Then("the user homepage should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -165,10 +162,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 23
    testRunner.And("I click on sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 24
-     testRunner.Then("the message \"Your login credentials are invalid. Please try again\" should be disp" +
-                        "layed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
