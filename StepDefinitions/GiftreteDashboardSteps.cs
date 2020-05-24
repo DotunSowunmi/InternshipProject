@@ -1,6 +1,7 @@
 ﻿using BlueOceanIntershipProject.PageObjects;
 using NUnit.Framework;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace BlueOceanIntershipProject.StepDefinitions
@@ -14,6 +15,39 @@ namespace BlueOceanIntershipProject.StepDefinitions
             giftreteDashboardPage = new GiftreteDashboardPage();
         }
 
+        [Given(@"I click on account detail tab")]
+        public void GivenIClickOnAccountDetailTab()
+        {
+            giftreteDashboardPage.ClickOnAccountDtlTab();
+        }
+
+        [Given(@"I click on change of profile picture icon")]
+        public void GivenIClickOnChangeOfProfilePictureIcon()
+        {
+            giftreteDashboardPage.ClickProfilePictureIcon();
+
+        }
+
+
+        [Given(@"I click on choose file link")]
+        public void GivenIClickOnChooseFileLink()
+        {
+            Thread.Sleep(5000);
+            giftreteDashboardPage.ClickChooseFileLink();
+        }
+
+
+        [Given(@"I click on upload file image button")]
+        public void GivenIClickOnUploadFileImageButton()
+        {
+            giftreteDashboardPage.ClickOnUploadProfileImage();
+        }
+
+        [Then(@"I should be able to upload my picture successfully")]
+        public void ThenIShouldBeAbleToUploadMyPictureSuccessfully()
+        {
+            
+        }
 
         [Given(@"I click Giftrete logo")]
         public void GivenIClickGiftreteLogo()

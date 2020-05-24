@@ -68,6 +68,7 @@ namespace BlueOceanIntershipProject.StepDefinitions
         [When(@"I edit date of birth")]
         public void WhenIEditDateOfBirth()
         {
+            Thread.Sleep(2000);
             giftreteProfileFormPage.EditDateOfBirth();
         }
 

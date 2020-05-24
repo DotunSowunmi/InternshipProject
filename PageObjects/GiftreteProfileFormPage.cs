@@ -25,7 +25,7 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement selectTitleFromDropDownBox => driver.FindElement(By.XPath("//*[@id='name_prefix']/option[3]"));
         IWebElement editFirstName => driver.FindElement(By.XPath("//*[@id='first_name']"));
         IWebElement editLastName => driver.FindElement(By.XPath("//input[@id='last_name']"));
-        IWebElement editDateOfBirth => driver.FindElement(By.XPath("//input[@id='dateofbirth']"));
+        IWebElement editDateOfBirth => driver.FindElement(By.XPath("//*[@id='dateofbirth']"));
         IWebElement editEmailAddress => driver.FindElement(By.XPath("//*[@id='email']"));
         IWebElement clickOnPhoneCountryCode => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/div/div/div/div/form[1]/div[6]/div/div/div/div[2]"));
         IWebElement selectNewCountryCode => driver.FindElement(By.CssSelector("#iti-item-gb > span.country-name"));
@@ -88,7 +88,7 @@ namespace BlueOceanIntershipProject.PageObjects
         public void EditDateOfBirth()
         {
             editDateOfBirth.Clear();
-            editDateOfBirth.SendKeys("24/06/1930");
+            //editDateOfBirth.SendKeys("24/06/1930");
         }
         public void EditLastName()
         {
@@ -132,7 +132,7 @@ namespace BlueOceanIntershipProject.PageObjects
         }
         public void EnterValidEmailAddress()
         {
-            enterValidEmailAddress.SendKeys("yinkaland000@gmail.com");
+            enterValidEmailAddress.SendKeys("yinkaland@gmail.com");
         }
         public void ClickOnSignin()
         {

@@ -23,6 +23,28 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement communityHomePageElement => driver.FindElement(By.XPath("//a[contains(text(),'Read Faqs on Community')]"));
         IWebElement searchHomePageElement => driver.FindElement(By.XPath("//h2[contains(@class,'heading-secondary font-weight-600 text-left font-size-20')]"));
         IWebElement helpPageHomeElement => driver.FindElement(By.XPath("//h2[contains(text(),'Get in touch with us')]"));
+        IWebElement accountDtlTab => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/ul/a[2]"));
+        IWebElement profilePictureIcon => driver.FindElement(By.XPath("//input[@id='profileBtnlnk']"));
+        IWebElement chooseFileLink => driver.FindElement(By.XPath("//input[@id='image_upload_profile']"));
+        IWebElement uploadProfileImage => driver.FindElement(By.XPath("//a[@id='btn_upload_profile']"));
+        public void ClickOnUploadProfileImage()
+        {
+            uploadProfileImage.Click();
+        }
+        public void ClickChooseFileLink()
+        {
+            chooseFileLink.SendKeys("C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\TestData\\Test\\images (1).jpg");
+        }
+
+        public void ClickProfilePictureIcon()
+        {
+            profilePictureIcon.Click();
+        }
+        public void ClickOnAccountDtlTab()
+        {
+
+            accountDtlTab.Click();
+        }
         public void ClickProfileName()
         {
             profileName.Click();

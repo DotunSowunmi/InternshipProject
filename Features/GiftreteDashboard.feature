@@ -17,6 +17,13 @@ Scenario: Managing GiftreteDashboard
     And I click Logout link
    Then I should be able to log out of my home page
 
+   Scenario: Changing Giftrete profile picture
+	Given I click on account detail tab
+    And I click on change of profile picture icon
+    And I click on choose file link
+    And I click on upload file image button
+   #Then I should be able to upload my picture successfully
+
 
    Scenario: Read community blogPage
 	 Given I click Blog link

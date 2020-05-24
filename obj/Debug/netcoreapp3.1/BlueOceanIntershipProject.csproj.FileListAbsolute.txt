@@ -212,7 +212,6 @@ C:\Users\dotun\source\repos\BlueOceanIntershipProject\bin\Debug\netcoreapp3.1\zh
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\BlueOceanIntershipProject.csprojAssemblyReference.cache
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\BlueOceanIntershipProject.csproj.CoreCompileInputs.cache
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\BlueOceanIntershipProject.AssemblyInfoInputs.cache
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\BlueOceanIntershipProject.AssemblyInfo.cs
