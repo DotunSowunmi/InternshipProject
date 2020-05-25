@@ -219,3 +219,4 @@ C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\Bl
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\BlueOceanIntershipProject.dll
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\BlueOceanIntershipProject.pdb
 C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\BlueOceanIntershipProject.genruntimeconfig.cache
+C:\Users\dotun\source\repos\BlueOceanIntershipProject\obj\Debug\netcoreapp3.1\BlueOceanIntershipProject.csprojAssemblyReference.cache

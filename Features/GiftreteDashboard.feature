@@ -24,6 +24,14 @@ Scenario: Managing GiftreteDashboard
     And I click on upload file image button
    #Then I should be able to upload my picture successfully
 
+    Scenario: Changing Giftrete banner picture
+	Given I click on account detail tab
+    And I click on change of banner picture icon
+    And I click on choose banner file link
+    And I click on upload banner image button
+   #Then I should be able to upload my picture successfully
+
+
 
    Scenario: Read community blogPage
 	 Given I click Blog link

@@ -49,6 +49,7 @@ namespace BlueOceanIntershipProject.StepDefinitions
             
         }
 
+
         [Given(@"I click Giftrete logo")]
         public void GivenIClickGiftreteLogo()
         {
@@ -122,5 +123,24 @@ namespace BlueOceanIntershipProject.StepDefinitions
         {
             Assert.True(giftreteDashboardPage.IsHelpPageHomeElementDisplayed());
         }
+
+        [Given(@"I click on change of banner picture icon")]
+        public void GivenIClickOnChangeOfBannerPictureIcon()
+        {
+            giftreteDashboardPage.ClickBannerPictureIcon();
+        }
+
+        [Given(@"I click on choose banner file link")]
+        public void GivenIClickOnChooseBannerFileLink()
+        {
+            giftreteDashboardPage.ClickBannerFileLink();
+        }
+
+        [Given(@"I click on upload banner image button")]
+        public void GivenIClickOnUploadBannerImageButton()
+        {
+            giftreteDashboardPage.ClickBannerImageUpload();
+        }
+
     }
 }

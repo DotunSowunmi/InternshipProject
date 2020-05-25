@@ -34,7 +34,7 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement clickOnYesOrNo => driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/div[1]/div/div/div/div/form[1]/div[8]/div[2]/label[2]"));
         IWebElement clickOnSubmitButton => driver.FindElement(By.Id("btn_save_details"));
         IWebElement successfulNotificationMessage => driver.FindElement(By.XPath("//p[@id='successMessage']"));
-
+        
 
         //IWebElement fileInput => driver.FindElement(By.Name(""));
 

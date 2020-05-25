@@ -27,13 +27,31 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement profilePictureIcon => driver.FindElement(By.XPath("//input[@id='profileBtnlnk']"));
         IWebElement chooseFileLink => driver.FindElement(By.XPath("//input[@id='image_upload_profile']"));
         IWebElement uploadProfileImage => driver.FindElement(By.XPath("//a[@id='btn_upload_profile']"));
+        IWebElement bannerPictureIcon => driver.FindElement(By.XPath("//input[@id='bannerBtnlnk']"));
+        IWebElement bannerFileLink => driver.FindElement(By.XPath("//input[@id='image_upload_banner']"));
+        IWebElement bannerImageUpload => driver.FindElement(By.XPath("//a[@id='btn_upload_banner']"));
+        public void ClickBannerImageUpload()
+        {
+            bannerImageUpload.Click();
+        }
+        public void ClickBannerFileLink()
+        {
+            bannerFileLink.SendKeys("C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\TestData\\Test\\images (1).jpg");
+        }
+        public void ClickBannerPictureIcon()
+        {
+            bannerPictureIcon.Click();
+        }
+
+
+
         public void ClickOnUploadProfileImage()
         {
             uploadProfileImage.Click();
         }
         public void ClickChooseFileLink()
         {
-            chooseFileLink.SendKeys("C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\TestData\\Test\\images (1).jpg");
+            chooseFileLink.SendKeys("C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\TestData\\Test\\2017-02-23_07-31-28.jpg");
         }
 
         public void ClickProfilePictureIcon()
