@@ -28,7 +28,7 @@ namespace BlueOceanIntershipProject.PageObjects
         IWebElement chooseFileLink => driver.FindElement(By.XPath("//input[@id='image_upload_profile'] "));
         IWebElement uploadProfileImage => driver.FindElement(By.XPath("//a[@id='btn_upload_profile']"));
         IWebElement bannerPictureIcon => driver.FindElement(By.XPath("//input[@id='bannerBtnlnk']"));
-        IWebElement bannerFileLink => driver.FindElement(By.XPath("//input[@id='image_upload_profile']"));
+        IWebElement bannerFileLink => driver.FindElement(By.XPath("//input[@id='image_upload_banner']"));
         IWebElement bannerImageUpload => driver.FindElement(By.XPath("//a[@id='btn_upload_banner']"));
         public void ClickBannerImageUpload()
         {
@@ -36,7 +36,7 @@ namespace BlueOceanIntershipProject.PageObjects
         }
         public void ClickBannerFileLink()
         {
-            bannerFileLink.SendKeys("C:\\Users\\dotun\\source\repos\\BlueOceanIntershipProject\\TestData\\Test\\images (1).jpg");
+            bannerFileLink.SendKeys("C:\\Users\\dotun\\source\repos\\BlueOceanIntershipProject\\TestData\\Test\\images (4).jpg");
         }
         public void ClickBannerPictureIcon()
         {
@@ -52,7 +52,7 @@ namespace BlueOceanIntershipProject.PageObjects
         public void ClickChooseFileLink()
         {
             Thread.Sleep(5000);
-            chooseFileLink.SendKeys("C:\\Users\\dotun\\233eesource\\repos\\BlueOceanIntershipProject\\TestData\\Test\\image3.jpg");
+            chooseFileLink.SendKeys("C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\TestData\\Test\\image3.jpg");
         }
 
         public void ClickProfilePictureIcon()

@@ -27,5 +27,13 @@ namespace BlueOceanIntershipProject.Hooks
             driver.Close();
             driver.Dispose();
         }
+        
+        public void Screenshot()
+        {
+            
+            
+            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile("C:\\Users\\dotun\\source\repos\\BlueOceanIntershipProject\\TestData\\Test.jpg");
+
+        }
     }
 }
