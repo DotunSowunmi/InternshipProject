@@ -5,12 +5,12 @@ using global::TechTalk.SpecFlow;
 
 [GeneratedCode("SpecFlow", "3.1.97")]
 [SetUpFixture]
-public class BlueOceanIntershipProject_NUnitAssemblyHooks
+public class BlueOceanProject_NUnitAssemblyHooks
 {
     [OneTimeSetUp]
     public void AssemblyInitialize()
     {
-        var currentAssembly = typeof(BlueOceanIntershipProject_NUnitAssemblyHooks).Assembly;
+        var currentAssembly = typeof(BlueOceanProject_NUnitAssemblyHooks).Assembly;
 
         TestRunnerManager.OnTestRunStart(currentAssembly);
     }
@@ -18,7 +18,7 @@ public class BlueOceanIntershipProject_NUnitAssemblyHooks
     [OneTimeTearDown]
     public void AssemblyCleanup()
     {
-        var currentAssembly = typeof(BlueOceanIntershipProject_NUnitAssemblyHooks).Assembly;
+        var currentAssembly = typeof(BlueOceanProject_NUnitAssemblyHooks).Assembly;
 
         TestRunnerManager.OnTestRunEnd(currentAssembly);
     }

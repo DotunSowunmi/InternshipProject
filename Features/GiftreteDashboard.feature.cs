@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace BlueOceanIntershipProject.Features
+namespace BlueOceanProject.Features
 {
     using TechTalk.SpecFlow;
     using System;

@@ -6662,9 +6662,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
-      "projectName": "BlueOceanIntershipProject",
-      "projectPath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
+      "projectUniqueName": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanProject.csproj",
+      "projectName": "BlueOceanProject",
+      "projectPath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanProject.csproj",
       "packagesPath": "C:\\Users\\dotun\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OumUj518yDiz/JndYc6NtJnmUx6n+OGk0Iz0Em0k3PX5sNYuoSaJz3wYgEruF2uJK5c3/1DiB0+edSD+dmWflg==",
+  "dgSpecHash": "jP6FdnfBkOUwMlqSaN7RPX+SnwQANi7zUjBAQkSNkz1dYDqbkEFMc6v6fn2OloijF6p3ehDTAdYau/CLAmUePQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanIntershipProject.csproj",
+  "projectFilePath": "C:\\Users\\dotun\\source\\repos\\BlueOceanIntershipProject\\BlueOceanProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dotun\\.nuget\\packages\\bodi\\1.4.1\\bodi.1.4.1.nupkg.sha512",
     "C:\\Users\\dotun\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",
